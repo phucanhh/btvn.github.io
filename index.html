@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script src="./index.js"></script>
+    <div style="display: flex;">
+        <input type="text" id="name">
+        <button id="btn" onclick="add()">Thêm</button>
+    </div>
+    <div style="display: flex;">
+        <input type="number" id="id">
+        <button id="btn" onclick="drop()">Xóa</button>
+    </div>
+   
+
+    <script>
+        function add() {
+            // var chu5 = { id:, name: "e", }
+            let id = chucais[chucais.length - 1].id + 1;
+            let name = document.getElementById("name").value;
+            chucais.push({id, name})
+            console.log(chucais)
+        }
+
+        function drop() {
+            let id = document.getElementById("id").value;
+            chucais = chucais.filter(chucai => chucai.id != id);
+            console.log(chucais)
+        }
+    </script>
+
+
+</body>
+
+</html>
